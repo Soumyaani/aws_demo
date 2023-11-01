@@ -1,5 +1,5 @@
 #!/bin/bash
-
+helper{}
 # GitHub API URL
 API_URL="https://api.github.com"
 
@@ -40,3 +40,10 @@ function list_users_with_read_access {
 
 echo "Listing users with read access to ${REPO_OWNER}/${REPO_NAME}..."
 list_users_with_read_access
+
+function helper{
+ expected_args=2
+ if[$#=ne $expected_args]; then
+   echo "please execute script with required cmd args"
+   echo "asd"
+}
